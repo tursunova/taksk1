@@ -1,0 +1,20 @@
+#include <stdio.h>
+
+int i,j,l,t,k,y,ans;
+int main(){
+    for(i=0;i<=9;i++){
+        for(j=0;j<=9;j++){
+            for(l=0;l<=9;l++){
+                for(t=0;t<=9;t++){
+                    for(k=0;k<=9;k++){
+                        for(y=0;y<=9;y++){
+                            if (i+j+l==t+k+y) ans++;
+                        }
+                    }
+                }
+            }
+        }
+    }
+    printf("%d",ans);
+    return 0;
+}

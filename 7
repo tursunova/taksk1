@@ -1,0 +1,15 @@
+#include <bits/stdc++.h>
+using namespace std;
+int i,k,er;
+string s;
+int main(){
+    cin>>s;
+    for(i=0;i<s.size();i++){
+        if (s[i]=='(') k++; else {
+            if (k==0) er=1; else k--;
+        }
+    }
+    if (k!=0) er=1;
+    if (er==0) printf("YES"); else printf("NO");
+    return 0;
+}

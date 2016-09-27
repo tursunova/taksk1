@@ -1,0 +1,21 @@
+#include <bits/stdc++.h>
+using namespace std;
+int i,j,l,ans;
+vector <int> s;
+
+int main(){
+    for(i=0;i<=9;i++){
+        for(j=0;j<=9;j++){
+            for(l=0;l<=9;l++){
+                s.push_back(i+j+l);
+            }
+        }
+    }
+    for(i=0;i<s.size();i++){
+        for(j=0;j<s.size();j++){
+            if (s[i]==s[j]) ans++;
+        }
+    }
+    printf("%d",ans);
+    return 0;
+}

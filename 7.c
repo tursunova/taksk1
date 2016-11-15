@@ -1,10 +1,12 @@
-#include <bits/stdc++.h>
-using namespace std;
-int i,k,er;
-string s;
+#include <stdio.h>
+#include <math.h>
+#include <string.h>
+
 int main(){
-    cin>>s;
-    for(i=0;i<s.size();i++){
+    int i,k=0,er=0;
+    char s[101];
+    scanf("%s",&s);
+    for(i=0;i<strlen(s);i++){
         if (s[i]=='(') k++; else {
             if (k==0) er=1; else k--;
         }

@@ -1,18 +1,17 @@
-#include <bits/stdc++.h>
-using namespace std;
-int i,j,l,ans;
-vector <int> s;
+#include <stdio.h>
 
 int main(){
+    int i,j,l,ans=0,k=0,s[100001];
     for(i=0;i<=9;i++){
         for(j=0;j<=9;j++){
             for(l=0;l<=9;l++){
-                s.push_back(i+j+l);
+                s[k]=i+j+l;
+                k++;
             }
         }
     }
-    for(i=0;i<s.size();i++){
-        for(j=0;j<s.size();j++){
+    for(i=0;i<k;i++){
+        for(j=0;j<k;j++){
             if (s[i]==s[j]) ans++;
         }
     }
